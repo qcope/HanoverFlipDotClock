@@ -20,6 +20,7 @@ class HanoverDisplay:
         self.cursor_col = 0
         self.cursor_row = 0
         self.screen_updates_left = 0
+        self.ser = None
         
     def __str__(self):
         display_string=""
@@ -139,7 +140,8 @@ class HanoverDisplay:
         #check if we are being asked to set the display to what it already is set to.
         if self.display_binary_old is not None and numpy.array_equal(self.display_binary,self.display_binary_old):
             return
-        ser = serial.Serial(port=self.port,baudrate=BAUDRATE)
+        if self.ser is None:
+            self.ser = serial.Serial(port=self.port,baudrate=BAUDRATE)
         length_data = DISPLAY_COLS * 2
         header = [0x02, 0x31, 0x30] #Binary output, display number zero
         strnum = str('{:02X}'.format(length_data))
@@ -165,7 +167,8 @@ class HanoverDisplay:
         #now send data to display
         for byte in data:
             ser.write(chr(byte).encode())
-        ser.close()
+        #Let's leave it to the destructor to close now
+        #ser.close()
         self.display_binary_old=numpy.copy(self.display_binary)
         self.screen_updates_left = self.screen_updates_left - 1
        
