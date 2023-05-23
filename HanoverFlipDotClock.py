@@ -1,7 +1,9 @@
 from datetime import datetime
 from HanoverDisplay import HanoverDisplay
 
-display=HanoverDisplay("COM4")
+HANOVER_PORT "/dev/ttyUSB0"       # COM4 or /dev/ttyUSB0 are good choices
+
+display=HanoverDisplay(HANOVER_PORT)
 
 while True:
     now_time=datetime.now()
