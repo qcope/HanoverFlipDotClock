@@ -166,7 +166,7 @@ class HanoverDisplay:
             data.append(ord(digit))
         #now send data to display
         for byte in data:
-            ser.write(chr(byte).encode())
+            self.ser.write(chr(byte).encode())
         #Let's leave it to the destructor to close now
         #ser.close()
         self.display_binary_old=numpy.copy(self.display_binary)
