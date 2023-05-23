@@ -168,7 +168,8 @@ class HanoverDisplay:
         for byte in data:
             self.ser.write(chr(byte).encode())
         #Let's leave it to the destructor to close now
-        #ser.close()
+        #ser.close() #seemed to cause grief on linux,. openning and closing all the time
         self.display_binary_old=numpy.copy(self.display_binary)
         self.screen_updates_left = self.screen_updates_left - 1
+
        
