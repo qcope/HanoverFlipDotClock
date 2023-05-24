@@ -10,5 +10,9 @@ No attempt is made to work with other models.
 I couldn't make this code work with my display. The author had gone to the trouble of writing the code to accomodate different resolutions but for
 me I couldn't get anything to display. I decided to use the understanding of the protocol/checksum from this code but remove any complexity
 of supporting different resolutions and focus on getting something working. 
+
+1234
+
 * [tuna-f1sh/node-flipdot](https://github.com/tuna-f1sh/node-flipdot)
+
 * [furrtek/HanoverFlipDot](https://github.com/furrtek/HanoverFlipDot)
