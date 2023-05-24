@@ -11,8 +11,7 @@ I couldn't make this code work with my display. The author had gone to the troub
 me I couldn't get anything to display. I decided to use the understanding of the protocol/checksum from this code but remove any complexity
 of supporting different resolutions and focus on getting something working. 
 
-1234
+* [tuna-f1sh/node-flipdot](https://github.com/tuna-f1sh/node-flipdot)Background reading, again my ignorance meant I couldn't make the code work.
 
-* [tuna-f1sh/node-flipdot](https://github.com/tuna-f1sh/node-flipdot)
+* [furrtek/HanoverFlipDot](https://github.com/furrtek/HanoverFlipDot)Interesting project where the author has written their own code to handle their display.
 
-* [furrtek/HanoverFlipDot](https://github.com/furrtek/HanoverFlipDot)
