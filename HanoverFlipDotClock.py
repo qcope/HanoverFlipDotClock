@@ -1,7 +1,7 @@
 from datetime import datetime
 from HanoverDisplay import HanoverDisplay
 
-HANOVER_PORT = "/dev/ttyUSB0"       # COM4 or /dev/ttyUSB0 are good choices
+HANOVER_PORT = "/dev/ttyUSB0"       # COM4 or /dev/ttyUSB0 are good choices. More testing
 
 display=HanoverDisplay(HANOVER_PORT)
 
