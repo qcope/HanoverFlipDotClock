@@ -3,6 +3,10 @@ Simple clock using a legacy Hanover flip dot bus destination display.
 Code is written around the 96x16 (model #M023C) display. 
 No attempt is made to work with other models.
 
+The code has a two dimensional array to represent the dots on the display. When required, the code generates 
+a message, encoding this array, in the way that the Hanover display expects to see this information. The code
+keeps a copy of what it believes is currently on the display... if it is called again to display the same image
+(common in a clock) then it doesn't bother to waste the displays time with this communication.
 
 
 ## Acknowledgements
